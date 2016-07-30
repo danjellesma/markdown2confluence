@@ -1,0 +1,4 @@
+env_make
+*.md
+!test.md
+!test-local.md
