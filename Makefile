@@ -20,12 +20,12 @@ shell:
 
 run:
 	docker run -t --rm --name $(NAME) $(VOLUMES) $(NS)/$(REPO):$(VERSION)
-
-start:
-	docker run -d --name $(NAME) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)
-
-stop:
-	docker stop $(NAME)
+#
+# start:
+# 	docker run -d --name $(NAME) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)
+#
+# stop:
+# 	docker stop $(NAME)
 
 rm:
 	docker rm $(NAME)
