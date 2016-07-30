@@ -1,8 +1,8 @@
-[![](https://images.microbadger.com/badges/image/danjellz/markdown2confluence.svg)](http://microbadger.com/#/images/danjellz/markdown2confluence "Get your own image badge on microbadger.com") [![GitHub issues](https://img.shields.io/github/issues/danjellesma/docker-markdown2confluence.svg)](https://github.com/danjellesma/docker-markdown2confluence/issues) [![GitHub stars](https://img.shields.io/github/stars/danjellesma/docker-markdown2confluence.svg)](https://github.com/danjellesma/docker-markdown2confluence/stargazers) [![GitHub forks](https://img.shields.io/github/forks/danjellesma/docker-markdown2confluence.svg)](https://github.com/danjellesma/docker-markdown2confluence/network)
+[![](https://images.microbadger.com/badges/image/danjellz/markdown2confluence.svg)](http://microbadger.com/#/images/danjellz/markdown2confluence "Get your own image badge on microbadger.com") [![GitHub issues](https://img.shields.io/github/issues/danjellesma/docker-markdown2confluence.svg)](https://github.com/danjellesma/docker-markdown2confluence/issues) [![GitHub stars](https://img.shields.io/github/stars/danjellesma/docker-markdown2confluence.svg)](https://github.com/danjellesma/docker-markdown2confluence/stargazers) [![GitHub forks](https://img.shields.io/github/forks/danjellesma/docker-markdown2confluence.svg)](https://github.com/danjellesma/docker-markdown2confluence/network) [![CircleCI](https://circleci.com/gh/danjellesma/markdown2confluence/tree/master.svg?style=svg)](https://circleci.com/gh/danjellesma/markdown2confluence/tree/master) [![](https://images.microbadger.com/badges/version/danjellz/markdown2confluence.svg)](http://microbadger.com/#/images/danjellz/markdown2confluence "Get your own version badge on microbadger.com")
 
-# Markdown2Confluence Docker Image
+# Markdown2Confluence
 
-Run a Docker image to Easily convert Markdown files to Atlassian Confluence markup language without the need to install Ruby, Gems, etc. I've personally found this to generate better Confluence markup vs the built in importer.
+Run a Docker image to easily convert Markdown files to Atlassian Confluence markup language without the need to install Ruby, Gems, etc. I've personally found this to generate better Confluence markup vs the built in importer.
 
 ## Basic Functionality
 
@@ -71,7 +71,7 @@ docker run -it --rm -v $(PWD):/markdown danjellz/markdown2confluence my-markdown
 Creating an alias in your `~/.bashrc` or `~/.zshrc` files can make this command much shorter. Example:
 
 ``` bash
-alias md2con="docker run -it --rm -v $(PWD):/markdown danjellz/markdown2confluence"
+alias md2con="docker run -it --rm -v `PWD`:/markdown danjellz/markdown2confluence"
 ```
 
 Allowing you to run the following to parse a Markdown file in your current directory
@@ -82,7 +82,7 @@ md2con some-markdown-file.md
 
 #### Copy to clipboard
 
-If on OSX, you can pip the output to PBCopy to automatically copy the Confluence markup to your clipboard
+If on OSX, you can pipe the output to PBCopy to automatically copy the Confluence markup to your clipboard
 ``` bash
 docker run -it --rm -v $(PWD):/markdown danjellz/markdown2confluence my-markdown-file.md | pbcopy
 ```

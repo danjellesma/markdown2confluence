@@ -4,4 +4,4 @@ machine:
 
 test:
   override:
-    - docker run -t danjellz/markdown2confluence .
+    - docker run -t --rm --name markdown2confluence danjellz/markdown2confluence:latest
